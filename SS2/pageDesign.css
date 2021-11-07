@@ -295,3 +295,85 @@ nav .menu li {
 }
 
 /* form feedback */
+
+.feedback-form {
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.feedback-form .max-width {
+  width: 50%;
+  margin: 0px;
+}
+
+.feedback-form .max-width .title {
+  font-size: 35px;
+}
+
+.feedback-form .max-width .orange-bar {
+  margin: 0px auto;
+}
+
+form {
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+form .label-area {
+  width: 100%;
+}
+
+form .label-area p {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 40px;
+}
+
+form .input-area {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.input-area input {
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.input-area select {
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.input-area .check-box {
+  display: flex;
+  /* flex-direction: row; */
+}
+
+.input-area .check-box p {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 30px;
+  margin-left: 10px;
+  /* display: block;
+  text-align: end; */
+}
+
+.input-area button {
+  background-color: orange;
+  color: #fff;
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+.input-area textarea {
+  border: 1px solid black;
+  padding: 5px;
+}
