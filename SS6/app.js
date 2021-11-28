@@ -117,12 +117,12 @@ typeof(KDL)
 
 ///// Kiểu dl Array: mảng (sử dụng để lưu trữ 1 dãy dl khác nhau)
 // khai báo mảng;
-let a = []; // Khai báo mảng rỗng
-let b = [1, 2, 3]; // khai báo mảng có x phần tử. 
+// let a = []; // Khai báo mảng rỗng
+// let b = [1, 2, 3]; // khai báo mảng có x phần tử. 
 
-// C2: khai báo mảng với từ khóa "new"
-let c = new Array();
-console.log(Array.isArray(c)); // true => đây là biến mảng, flase: đây ko phải biến Mảng
+// // C2: khai báo mảng với từ khóa "new"
+// let c = new Array();
+// console.log(Array.isArray(c)); // true => đây là biến mảng, flase: đây ko phải biến Mảng
 
 
 ////// Thao tác với mảng. C,R,U,D;
@@ -134,57 +134,74 @@ D:Delete: Xóa phần tử trong mảng
 
 */
 
-let animals = ["dog", 'cat', 'fish'];
-//// C: Create: Thêm x phần tử vào cuối mảng
-animals.push("bear", "mouse"); // thêm 2 phần tử
-console.log("Phần tử mảng sau khi thêm 2 là: ", animals);
+// let animals = ["dog", 'cat', 'fish'];
+// //// C: Create: Thêm x phần tử vào cuối mảng
+// animals.push("bear", "mouse"); // thêm 2 phần tử
+// console.log("Phần tử mảng sau khi thêm 2 là: ", animals);
 
-// Thêm "horse" vào vị trí ngay sau "dog" trong mảng;
-animals.splice(1, 0, "horse");
-console.log("Phần tử mảng sau khi thêm 'horse' vào sau 'dog' là: ", animals);
+// // Thêm "horse" vào vị trí ngay sau "dog" trong mảng;
+// animals.splice(1, 0, "horse");
+// console.log("Phần tử mảng sau khi thêm 'horse' vào sau 'dog' là: ", animals);
 
-//// R: Read: đọc mảng => sử dụng alert(...), console.log(.) 
+// //// R: Read: đọc mảng => sử dụng alert(...), console.log(.) 
 
-//// U: Update: cập nhật, sửa nội dung của mảng.
-// Sửa "dog"=> "tiger";
-animals[0] = 'tiger';
-console.log("Phần tử mảng sau khi sửa 'dog' thành 'tiger' là: ", animals);
-// sửa 'cat', 'fish' thành 'panter','bird'
+// //// U: Update: cập nhật, sửa nội dung của mảng.
+// // Sửa "dog"=> "tiger";
+// animals[0] = 'tiger';
+// console.log("Phần tử mảng sau khi sửa 'dog' thành 'tiger' là: ", animals);
+// // sửa 'cat', 'fish' thành 'panter','bird'
 
-let indexCat = animals.indexOf('cat');// tìm vị trí của "cat" trong mảng
-animals.splice(indexCat, 2, 'panter', 'bird');
-console.log("Phần tử mảng sau khi sửa 'cat', 'fish' thành 'panter','bird' là: ", animals);
+// let indexCat = animals.indexOf('cat');// tìm vị trí của "cat" trong mảng
+// animals.splice(indexCat, 2, 'panter', 'bird');
+// console.log("Phần tử mảng sau khi sửa 'cat', 'fish' thành 'panter','bird' là: ", animals);
 
-///D: Delete phần tử trong mảng: 
-// Xóa 2 phần tử cuối cùng trong mảng;
-animals.splice(animals.length - 2, 2); // mảng còn 4 phần tử
+// ///D: Delete phần tử trong mảng: 
+// // Xóa 2 phần tử cuối cùng trong mảng;
+// animals.splice(animals.length - 2, 2); // mảng còn 4 phần tử
 
-// Xóa phần tử nào là 'panter' ra khỏi mảng;
-let indexPanter = animals.indexOf('panter'); // Tìm đc vị trí của panter
-animals.splice(indexPanter, 1);
-console.log("Mảng sau khi xóa phần tử 'panter' là: ", animals);
-
-
+// // Xóa phần tử nào là 'panter' ra khỏi mảng;
+// let indexPanter = animals.indexOf('panter'); // Tìm đc vị trí của panter
+// animals.splice(indexPanter, 1);
+// console.log("Mảng sau khi xóa phần tử 'panter' là: ", animals);
 
 
+////// Object: Đối tượng (Tên đối tượng, luôn viết hoa chữ cái đầu tiên)
+//// khai báo 1 đối tượng
+let Animals = {};
+
+// kiểm tra kdl có phải là đối tượng hay không:
+console.log(typeof (obj));
+
+//// thao tác C,R,U,D với Object;
+//C: Thêm 1 thuộc tính vào trong mảng;
+Animals.legs = 4
+console.log("Số chân động vật là: ", Animals.legs);
+
+// thêm 3 động vật có bốn chân vào đây:
+Animals.animals4Legs = ['lion', 'panter', 'dog'];
+console.log("Động vật có 4 chân là ", Animals.animals4Legs);
+
+// Thêm 1 phương thức là 'go' vào trong đối tượng Animals
+Animals.go = function () {
+  alert('Chúng tôi là động vật 4 chân và chúng tôi đi = 4 chân giống như Phúc nói!!');
+
+}
+
+//// R: đọc đối tượng. Sử dụng console.log, alert, ....
+
+//// U: Cập nhật giá trị của thuộc tính.
+// Thêm 'mouse', 'horse' vào trong số động vật có 4 chân của đối tượng Animals
+Animals.animals4Legs.push('mouse', 'horse'); // Thêm 2 phần tử vào mảng qua phương thức .push();
+console.log("Động vật có 4 chân sau khi thêm 'mouse', 'horse' là: ", Animals.animals4Legs);
+// Cập nhật phương thức 'go' trong đối tượng Animals thành: câu nói: 'Chúng ta đi = 4 chân'
+Animals.go = function () {
+  alert('Chúng ta đi = 4 chân')
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//// D: Delete thuộc tính trong đối tượng.
+// Xóa thuộc tính 'legs' trong đối tượng Animals
+delete Animals.legs; // xóa thuộc tính "legs" trong đối tượng.
 
 
