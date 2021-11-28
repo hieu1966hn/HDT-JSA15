@@ -109,11 +109,73 @@ typeof(KDL)
 
 // Vòng lặp for: in ra từ 1-> 10
 // Vòng lặp biết trước số lần lặp.
-for (let i = 1; i <= 10; i++) {
-  console.log(i);// 1, 2, 3, ....10
+// for (let i = 1; i <= 10; i++) {
+//   console.log(i);// 1, 2, 3, ....10
 
-}
+// }
 // NX: kết quả cuối cùng i = 11; Và vòng lặp for in ra số từ 1 -> 10
+
+///// Kiểu dl Array: mảng (sử dụng để lưu trữ 1 dãy dl khác nhau)
+// khai báo mảng;
+let a = []; // Khai báo mảng rỗng
+let b = [1, 2, 3]; // khai báo mảng có x phần tử. 
+
+// C2: khai báo mảng với từ khóa "new"
+let c = new Array();
+console.log(Array.isArray(c)); // true => đây là biến mảng, flase: đây ko phải biến Mảng
+
+
+////// Thao tác với mảng. C,R,U,D;
+/*
+C:Create: Thêm phần tử vào trong mảng (danh sách) 
+R:Read: Đọc mảng
+U:Update: Cập nhật, sửa mảng
+D:Delete: Xóa phần tử trong mảng
+
+*/
+
+let animals = ["dog", 'cat', 'fish'];
+//// C: Create: Thêm x phần tử vào cuối mảng
+animals.push("bear", "mouse"); // thêm 2 phần tử
+console.log("Phần tử mảng sau khi thêm 2 là: ", animals);
+
+// Thêm "horse" vào vị trí ngay sau "dog" trong mảng;
+animals.splice(1, 0, "horse");
+console.log("Phần tử mảng sau khi thêm 'horse' vào sau 'dog' là: ", animals);
+
+//// R: Read: đọc mảng => sử dụng alert(...), console.log(.) 
+
+//// U: Update: cập nhật, sửa nội dung của mảng.
+// Sửa "dog"=> "tiger";
+animals[0] = 'tiger';
+console.log("Phần tử mảng sau khi sửa 'dog' thành 'tiger' là: ", animals);
+// sửa 'cat', 'fish' thành 'panter','bird'
+
+let indexCat = animals.indexOf('cat');// tìm vị trí của "cat" trong mảng
+animals.splice(indexCat, 2, 'panter', 'bird');
+console.log("Phần tử mảng sau khi sửa 'cat', 'fish' thành 'panter','bird' là: ", animals);
+
+///D: Delete phần tử trong mảng: 
+// Xóa 2 phần tử cuối cùng trong mảng;
+animals.splice(animals.length - 2, 2); // mảng còn 4 phần tử
+
+// Xóa phần tử nào là 'panter' ra khỏi mảng;
+let indexPanter = animals.indexOf('panter'); // Tìm đc vị trí của panter
+animals.splice(indexPanter, 1);
+console.log("Mảng sau khi xóa phần tử 'panter' là: ", animals);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
