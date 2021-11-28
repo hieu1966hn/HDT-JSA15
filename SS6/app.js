@@ -81,9 +81,39 @@ typeof(KDL)
 // }
 
 
-////// 3 vòng lặp cơ bản:
+////// 3 vòng lặp cơ bản: while/ do - while /for
+// : Sử dụng vòng lặp in ra từ 0 -> 10;
 
+//while: Kiểm tra đk. "đúng" => chạy code và quay lại để ktđk. Nếu "sai" => thoát vòng lặp
+// let i = 0;
+// while (i <= 10) {
+//   // sau mỗi lần lặp: cái gì thay đổi;
+//   console.log(i);// 0,1,2,3,4,... 10
+//   i++;// tăng i lên 1 đơn vị
+// }
 
+// do-while: Cho phép lặp lần đầu tiên. Sau đó bắt đầu kiểm tra đk giống hệt với while
+// cho phép người dùng nhập vào số. Kiểm tra ko phải số thì bắt nhập lại.
+
+// let input;
+// do {
+//   input = (prompt("Mời người dùng nhập vào 1 số bất kỳ"));// người dùng nhập.
+//   console.log("Số người dùng vừa nhập là:", input);
+// }
+// while (input != Number(input));// kdl không phải là number => nhập lại
+
+/**
+ * != : Khác giá trị (so sánh tương đối)
+ * !== : Khác kiểu dl (so sánh tuyệt đối)
+ */
+
+// Vòng lặp for: in ra từ 1-> 10
+// Vòng lặp biết trước số lần lặp.
+for (let i = 1; i <= 10; i++) {
+  console.log(i);// 1, 2, 3, ....10
+
+}
+// NX: kết quả cuối cùng i = 11; Và vòng lặp for in ra số từ 1 -> 10
 
 
 
