@@ -74,3 +74,32 @@
   font-weight: lighter;
   position: relative;
 }
+
+
+/* style phần dưới */
+.additional-section {
+  border-top: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px 20px;
+  font-size: 13px;
+}
+
+.additional-section .row {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.additional-section .row .item {
+  display: flex;
+  flex-direction: column;
+  /* flex: 1; */
+  /* flex: 1; là gì?? */
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.additional-section .item .label {
+  font-weight: bold;
+}
