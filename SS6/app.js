@@ -127,7 +127,7 @@ typeof(KDL)
 
 ////// Thao tác với mảng. C,R,U,D;
 /*
-C:Create: Thêm phần tử vào trong mảng (danh sách) 
+C:Create: Thêm phần tử vào trong mảng (danh sách)
 R:Read: Đọc mảng
 U:Update: Cập nhật, sửa mảng
 D:Delete: Xóa phần tử trong mảng
@@ -167,41 +167,39 @@ D:Delete: Xóa phần tử trong mảng
 
 ////// Object: Đối tượng (Tên đối tượng, luôn viết hoa chữ cái đầu tiên)
 //// khai báo 1 đối tượng
-let Animals = {};
+// let Animals = {};
 
-// kiểm tra kdl có phải là đối tượng hay không:
-console.log(typeof (obj));
+// // kiểm tra kdl có phải là đối tượng hay không:
+// console.log(typeof (obj));
 
-//// thao tác C,R,U,D với Object;
-//C: Thêm 1 thuộc tính vào trong mảng;
-Animals.legs = 4
-console.log("Số chân động vật là: ", Animals.legs);
+// //// thao tác C,R,U,D với Object;
+// //C: Thêm 1 thuộc tính vào trong mảng;
+// Animals.legs = 4
+// console.log("Số chân động vật là: ", Animals.legs);
 
-// thêm 3 động vật có bốn chân vào đây:
-Animals.animals4Legs = ['lion', 'panter', 'dog'];
-console.log("Động vật có 4 chân là ", Animals.animals4Legs);
+// // thêm 3 động vật có bốn chân vào đây:
+// Animals.animals4Legs = ['lion', 'panter', 'dog'];
+// console.log("Động vật có 4 chân là ", Animals.animals4Legs);
 
-// Thêm 1 phương thức là 'go' vào trong đối tượng Animals
-Animals.go = function () {
-  alert('Chúng tôi là động vật 4 chân và chúng tôi đi = 4 chân giống như Phúc nói!!');
+// // Thêm 1 phương thức là 'go' vào trong đối tượng Animals
+// Animals.go = function () {
+//   alert('Chúng tôi là động vật 4 chân và chúng tôi đi = 4 chân giống như Phúc nói!!');
 
-}
+// }
 
 //// R: đọc đối tượng. Sử dụng console.log, alert, ....
 
 //// U: Cập nhật giá trị của thuộc tính.
 // Thêm 'mouse', 'horse' vào trong số động vật có 4 chân của đối tượng Animals
-Animals.animals4Legs.push('mouse', 'horse'); // Thêm 2 phần tử vào mảng qua phương thức .push();
-console.log("Động vật có 4 chân sau khi thêm 'mouse', 'horse' là: ", Animals.animals4Legs);
-// Cập nhật phương thức 'go' trong đối tượng Animals thành: câu nói: 'Chúng ta đi = 4 chân'
-Animals.go = function () {
-  alert('Chúng ta đi = 4 chân')
-}
+// Animals.animals4Legs.push('mouse', 'horse'); // Thêm 2 phần tử vào mảng qua phương thức .push();
+// console.log("Động vật có 4 chân sau khi thêm 'mouse', 'horse' là: ", Animals.animals4Legs);
+// // Cập nhật phương thức 'go' trong đối tượng Animals thành: câu nói: 'Chúng ta đi = 4 chân'
+// Animals.go = function () {
+//   alert('Chúng ta đi = 4 chân')
+// }
 
 
 
-//// D: Delete thuộc tính trong đối tượng.
-// Xóa thuộc tính 'legs' trong đối tượng Animals
-delete Animals.legs; // xóa thuộc tính "legs" trong đối tượng.
-
-
+// //// D: Delete thuộc tính trong đối tượng.
+// // Xóa thuộc tính 'legs' trong đối tượng Animals
+// delete Animals.legs; // xóa thuộc tính "legs" trong đối tượng.

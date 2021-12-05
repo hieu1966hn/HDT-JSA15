@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+</head>
+
+
+<body>
+  <!-- code web thời tiết tại đây -->
+  <div class="container">
+
+    <!-- phần trên -->
+    <div class="main-section">
+
+      <div class="section-bar">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" name="search-city" id="search-input" placeholder="Tìm kiếm thành phố">
+      </div>
+
+      <div class="info-wrapper">
+        <p class="city-name">_ _</p>
+        <p class="weather-state">_ _</p>
+        <img class="weather-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="Not found">
+        <p class="temperature">25°C</p>
+
+      </div>
+
+    </div>
+
+
+
+
+    <!-- phần dưới -->
+    <div class="additional-section">
+
+      <div class="row">
+        <div class="item">
+          <div class="label">Mặt trời mọc</div>
+          <div class="value">5:50</div>
+        </div>
+
+        <div class="item">
+          <div class="label">Mặt trời lặn</div>
+          <div class="value">17:15</div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="item">
+          <div class="label">Độ ẩm</div>
+          <div class="value">
+            <span class="humidity">...</span>
+            %
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="label">Gió</div>
+          <div class="value">
+            <span class="wind-speed">...</span>
+            km/h
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+  <!-- link tới file index.js -->
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
