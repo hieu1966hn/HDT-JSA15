@@ -27,6 +27,9 @@ searchInput.addEventListener("change", function (event) {
         console.log(data);// in ra dữ liệu được gửi về từ trang openweather
         cityName.innerHTML = data.name;
         weatherState.innerHTML = data.weather[0].main;
+        weatherIcon.src =
+          `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+
       }
     )
 })
