@@ -19,26 +19,38 @@ const windSpeed = document.querySelector(".wind-speed");
 // bắt sự kiện tại thẻ input
 searchInput.addEventListener("change", function (event) {
   // console.log(event.target.value);
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${event.target.value}&appid=${APP_ID}`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${event.target.value}&appid=${APP_ID}&lang=vi&units=metric`)
     .then(
       async function (res) {
         const data = await res.json();
 
         console.log(data);// in ra dữ liệu được gửi về từ trang openweather
         cityName.innerHTML = data.name;
-        weatherState.innerHTML = data.weather[0].main;
+        weatherState.innerHTML = data.weather[0].description;
         weatherIcon.src =
           `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
         temperature.innerHTML = data.main.temp
 
-        sunrise.innerHTML = data.sys.sunrise
-        sunset.innerHTML = data.sys.sunset
+
+
+        sunrise.innerHTML = miliseconToHour(data.sys.sunrise)
+        sunset.innerHTML = miliseconToHour(data.sys.sunset)
+        // moment.unix(data.sys.sunrise).format('HH:mm');
+        // sunset.innerHTML = moment.unix(data.sys.sunset).format('HH:mm');
 
         humidity.innerHTML = data.main.humidity;
         windSpeed.innerHTML = (data.wind.speed * 3.6);
       }
     )
 })
+
+function miliseconToHour(time) {
+  // Thuật toán quy đổi từ ms (mili giây) -> hh:mm:ss
+  var sec = time;
+  var date = new Date(sec * 1000);
+  var timestr = date.toLocaleTimeString();
+  return timestr
+}
 
 
 
