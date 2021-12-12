@@ -1,5 +1,6 @@
 // Call API ở đây
 const APP_ID = '651daf0af47eb49a9b65a0007afcce53';
+const DEFAULT_VALUE = '_ _';
 // bọc nó dưới dạng chỗi nhé các em.
 const searchInput = document.querySelector("#search-input");
 
@@ -25,11 +26,11 @@ searchInput.addEventListener("change", function (event) {
         const data = await res.json();
 
         console.log(data);// in ra dữ liệu được gửi về từ trang openweather
-        cityName.innerHTML = data.name;
-        weatherState.innerHTML = data.weather[0].description;
+        cityName.innerHTML = data.name || DEFAULT_VALUE;
+        weatherState.innerHTML = data.weather[0].description || DEFAULT_VALUE;
         weatherIcon.src =
-          `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
-        temperature.innerHTML = data.main.temp
+          `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png` || DEFAULT_VALUE
+        temperature.innerHTML = data.main.temp || DEFAULT_VALUE
 
 
 
@@ -40,6 +41,8 @@ searchInput.addEventListener("change", function (event) {
 
         humidity.innerHTML = data.main.humidity;
         windSpeed.innerHTML = (data.wind.speed * 3.6);
+
+        searchInput.value = '';
       }
     )
 })
