@@ -16,6 +16,22 @@ const windSpeed = document.querySelector(".wind-speed");
 
 
 
+// bắt sự kiện tại thẻ input
+searchInput.addEventListener("change", function (event) {
+  // console.log(event.target.value);
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${event.target.value}&appid=${APP_ID}`)
+    .then(
+      async function (res) {
+        const data = await res.json();
+
+        console.log(data);// in ra dữ liệu được gửi về từ trang openweather
+        cityName.innerHTML = data.name;
+        weatherState.innerHTML = data.weather[0].main;
+      }
+    )
+})
+
+
 
 // let city = "hanoi"
 // // call API với fetch trong Javascript:
