@@ -35,7 +35,7 @@ searchInput.addEventListener("change", function (event) {
 
         sunrise.innerHTML = miliseconToHour(data.sys.sunrise)
         sunset.innerHTML = miliseconToHour(data.sys.sunset)
-        // moment.unix(data.sys.sunrise).format('HH:mm');
+
         // sunset.innerHTML = moment.unix(data.sys.sunset).format('HH:mm');
 
         humidity.innerHTML = data.main.humidity;
@@ -44,12 +44,14 @@ searchInput.addEventListener("change", function (event) {
     )
 })
 
+
+
 function miliseconToHour(time) {
   // Thuật toán quy đổi từ ms (mili giây) -> hh:mm:ss
   var sec = time;
   var date = new Date(sec * 1000);
   var timestr = date.toLocaleTimeString();
-  return timestr
+  return timestr;
 }
 
 
