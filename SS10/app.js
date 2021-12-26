@@ -32,8 +32,33 @@ function store() {
     alert("Please add 1 number")
   }
   else {
-    alert("nothing")
+    localStorage.setItem("email", name.value);
+    localStorage.setItem("pw", pw.value);
+    alert("Your account has been created")
   }
 
+}
 
+// Định nghĩa hàm check
+function check() {
+  let storeName = localStorage.email;
+  let storePw = localStorage.pw
+  // lấy thành công email + password
+
+  // C2:
+  // let storePw = localStorage.getItem("pw")
+
+  let userName = document.getElementById("userName");
+  let userPw = document.getElementById("userPw");
+  let userRemember = document.getElementById("rememberMe");
+
+  if (userName.value == storeName
+    &&
+    userPw.value == storePw
+  ) {
+    alert("You are logged in")
+  }
+  else {
+    alert("Error on login")
+  }
 }
