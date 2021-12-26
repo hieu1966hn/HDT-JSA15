@@ -56,9 +56,17 @@ function check() {
     &&
     userPw.value == storePw
   ) {
-    alert("You are logged in")
+    // alert("You are logged in")
+    toHomePage();
+    // window.location.replace("http://stackoverflow.com");
+
   }
   else {
     alert("Error on login")
   }
+}
+
+
+function toHomePage() {
+  window.location.href = "./trangchu.html"
 }
