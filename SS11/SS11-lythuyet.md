@@ -24,3 +24,20 @@ Giới thiệu về "Media query" trong CSS:
 @media not|only mediatype and (mediafeature and|or|not mediafeature){
     CSS-code
 }
+
+Giải thích cú pháp:
+- keywords: 
++ not: loại trừ
++ only: Chỉ duy nhất với
++ and: và
++ or: hoặc
+
+- Mediatypes: Chế độ màn hình
++ print: Màn hình máy in
++ screen: Màn hình hiện tại đang sử dụng (điện thoại, máy tính,..)
++ speech: Màn hình nói được (sử dụng cho người khuyết tật)
++ all - default: Mặc định tất cả (gộp cả 3 màn hình)
+
+- Media Feature: Đối tượng phân giải cụ thể để CSS:
++ min-width: Chiều rộng tối thiểu
++ max-width: Chiều rộng tối đa
