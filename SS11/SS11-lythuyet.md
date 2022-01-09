@@ -48,6 +48,7 @@ Giải thích cú pháp:
 
 Khái niệm Breakpoint:
 - Là những điểm, vị trí mà bố cục website sẽ thay đổi - thích ứng để tạo nên giao diện đa thiết bị(hay còn gọi là Responsive).
+
 - Trang web thường sẽ có 3 điểm Breakpoint như sau: 
 + Mobile: width: < 740px
 + Tablet: 740px <= width <= 1024px
