@@ -29,7 +29,7 @@ function store() {
     alert("Please add 1 uppercase letter");
   }
   else if (!pw.value.match(numbers)) {
-    alert("Please add 1 number")
+    alert("Please add 1 number");
   }
   else {
     localStorage.setItem("email", name.value);
