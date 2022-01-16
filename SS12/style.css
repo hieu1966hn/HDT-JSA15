@@ -65,6 +65,10 @@ article img {
     left: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.3);
+
+    display: none;
+
+    animation: fadeIn linear 0.5s;
 }
 
 
@@ -79,6 +83,9 @@ article img {
     background-color: white;
 
     z-index: 1;
+
+    transform: translateX(-100%);
+    transition: all 0.5s;
 }
 
 .nav__mobile-list {
@@ -105,6 +112,15 @@ article img {
 
 }
 
+.nav__input:checked ~ .nav__overlay{
+    display: block;
+}
+
+
+.nav__input:checked ~ .nav__mobile{
+    transform: translateX(0%);
+}
+
 
 /* Responsive */
 @media (max-width: 1023px) {
@@ -114,5 +130,15 @@ article img {
 
     .nav__pc {
         display: none;
+    }
+}
+
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }
