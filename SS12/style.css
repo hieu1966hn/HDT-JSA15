@@ -49,3 +49,31 @@ article img {
     display: block;
     margin: 32px auto;
 }
+
+
+.nav__bars-btn{
+    width: 28px;
+    height: 28px;
+    color: #fff;
+    display: none;
+}
+
+.nav__overlay{
+    position: fixed;
+    top: 0;
+    right: 0%;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+    .nav__bars-btn{
+        display: block;
+    }
+
+    .nav__pc{
+        display: none;
+    }
+}
